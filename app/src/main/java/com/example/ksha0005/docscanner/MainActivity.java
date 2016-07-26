@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends ActionBarActivity {
-    Button b1,b2;
+    Button scanButton;
     ImageView iv;
 
     @Override
@@ -20,10 +20,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b1=(Button)findViewById(R.id.button);
+        scanButton=(Button)findViewById(R.id.button);
         iv=(ImageView)findViewById(R.id.imageView);
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
